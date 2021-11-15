@@ -20,7 +20,7 @@ public static class PlayingCardFactory
         return cards;
     }
 
-    public static IEnumerable<PlayingCard> GetCards() => 
+    public static List<PlayingCard> GetCards() => 
         _cards.Values
         .OrderByDescending(e => e.Suit).ThenByDescending(e => e.Rank)
         .ToList();

@@ -1,0 +1,15 @@
+﻿.cardview-rect-spades {
+    fill:darkslategray;
+}
+
+.cardview-rect-hearts {
+    fill: indianred;
+}
+
+.cardview-rect-diamonds {
+    fill: deepskyblue;
+}
+
+.cardview-rect-clubs {
+    fill: green;
+}

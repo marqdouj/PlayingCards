@@ -1,0 +1,14 @@
+﻿@page "/deckofcards"
+@using RazorPlayingCards
+@using PlayingCards
+
+<h3>DeckOfCards</h3>
+
+<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Hearts)"/>
+<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Spades)"/>
+<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Diamonds)"/>
+<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Clubs)"/>
+
+@code {
+    private PlayingCardDeck Deck = new PlayingCardDeck();
+}

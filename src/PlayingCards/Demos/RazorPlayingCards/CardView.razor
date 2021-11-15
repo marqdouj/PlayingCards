@@ -1,0 +1,33 @@
+﻿@using PlayingCards
+@using System.Drawing
+
+<div>
+    <svg width="@Width" height="@Height">
+        <rect class="@RectClass" width="100%" height="100%" />
+        <text x="@CenterX" y="@CenterY" dominant-baseline="middle"
+            font-weight="400" font-size="@FontSize" text-anchor="middle" fill="white">@Card.Key</text>
+    </svg>
+</div>
+
+@code{
+    private int CenterX => Width / 2;
+    private int CenterY => Height / 2;
+    private string? RectClass { get; set; }
+
+    [Parameter]
+    public int FontSize { get; set; } = 50;
+    [Parameter]
+    public int Height { get; set; } = 100;
+    [Parameter]
+    public int Width { get; set; } = 75;
+
+    [Parameter]
+    public PlayingCard Card { get; set; } 
+        = PlayingCardFactory.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Spades);
+
+    protected override Task OnParametersSetAsync()
+    {
+        RectClass = $"cardview-rect-{Card.Suit.ToString().ToLower()}";
+        return base.OnParametersSetAsync();
+    }
+}
