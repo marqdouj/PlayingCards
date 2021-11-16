@@ -41,6 +41,8 @@ public class PlayingCardDeck
         UpdateCards(oldCards);
     }
 
+    public void Reset() => UpdateCards(PlayingCardFactory.GetCards());
+
     public void Shuffle()
     {
         var newCards = new List<PlayingCard>();

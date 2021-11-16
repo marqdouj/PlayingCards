@@ -2,13 +2,29 @@
 @using RazorPlayingCards
 @using PlayingCards
 
-<h3>DeckOfCards</h3>
+<h3>Deck of Cards</h3>
 
-<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Hearts)"/>
-<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Spades)"/>
-<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Diamonds)"/>
-<CardView Card="@Deck.GetCard(PlayingCardRank.Ace, PlayingCardSuit.Clubs)"/>
+<button class="btn btn-primary" @onclick="ShuffleDeck">Shuffle</button>
+<button class="btn btn-primary" @onclick="ResetDeck">Reset</button>
+
+<div class="carddeck-container">
+    @foreach (var card in Deck.Cards)
+    {
+       <CardView Card="@card"/>
+    }
+</div>
 
 @code {
     private PlayingCardDeck Deck = new PlayingCardDeck();
+
+    private void ShuffleDeck()
+    {
+        Deck.Shuffle();
+        StateHasChanged();
+    }
+
+    private void ResetDeck()
+    {
+        Deck.Reset();
+    }
 }
