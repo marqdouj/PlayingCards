@@ -12,9 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayingCards", "PlayingCard
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{587DEE71-E41B-4697-8888-12567919472A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerDemo", "Demos\BlazorServerDemo\BlazorServerDemo.csproj", "{FEC8A01C-A61A-49C0-A08A-D4F37596378D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerDemo", "Demos\BlazorServerDemo\BlazorServerDemo.csproj", "{FEC8A01C-A61A-49C0-A08A-D4F37596378D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPlayingCards", "Demos\RazorPlayingCards\RazorPlayingCards.csproj", "{9C63A9CC-A904-45CE-AD06-FC68D95A9A56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPlayingCards", "Demos\RazorPlayingCards\RazorPlayingCards.csproj", "{9C63A9CC-A904-45CE-AD06-FC68D95A9A56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
